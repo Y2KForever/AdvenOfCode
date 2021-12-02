@@ -41,6 +41,12 @@ build/Release
 node_modules/
 jspm_packages/
 
+# Rust target
+target/
+
+#MacOS
+.DS_Store
+
 # TypeScript v1 declaration files
 typings/
 
