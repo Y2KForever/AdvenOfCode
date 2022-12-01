@@ -16,8 +16,3 @@ const answer = input
   .sort((a, z) => z - a);
 
 console.log(answer[0]);
-
-console.log(
-  "Part Two:",
-  sumsSorted.slice(0, 3).reduce((sum, v) => sum + v, 0)
-);
