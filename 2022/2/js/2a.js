@@ -1,8 +1,5 @@
 const fs = require("fs");
-const file = fs.readFileSync(
-  "/Users/hansen/Desktop/AdventOfCode/2022/2/input.txt",
-  { flag: "r", encoding: "utf-8" }
-);
+const file = fs.readFileSync("../input.txt", { flag: "r", encoding: "utf-8" });
 const split = file.split("\n");
 
 const rules = {
