@@ -1,6 +1,5 @@
-const fs = require("fs");
-const file = fs.readFileSync("../input.txt", { flag: "r", encoding: "utf-8" });
-const split = file.split("\n");
+const { readInput } = require("../../utils");
+const split = readInput("../input.txt");
 
 const rules = {
   X: {
@@ -49,7 +48,9 @@ const score = [];
 split.forEach((val) => {
   const thisVal = val.split(" ");
   const hand = hands[thisVal[0]];
-  score.push(rules[thisVal[1]][hand].points);
+  if (hand) {
+    score.push(rules[thisVal[1]][hand].points);
+  }
 });
 
 const answer = score.reduce((curr, prev) => curr + prev, 0);

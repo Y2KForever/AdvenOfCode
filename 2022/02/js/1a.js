@@ -1,6 +1,5 @@
-const fs = require("fs");
-const file = fs.readFileSync("../input.txt", { flag: "r", encoding: "utf-8" });
-const split = file.split("\n");
+const { readInput } = require("../../utils");
+const split = readInput("../input.txt");
 
 const rules = {
   X: {
@@ -24,12 +23,12 @@ const score = [];
 
 split.forEach((val) => {
   const thisVal = val.split(" ");
-  if (rules[thisVal[1]].win === thisVal[0]) {
-    score.push(rules[thisVal[1]].points + 6);
-  } else if (rules[thisVal[1]].draw === thisVal[0]) {
-    score.push(rules[thisVal[1]].points + 3);
+  if (rules[thisVal[1]]?.win === thisVal[0]) {
+    score.push(rules[thisVal[1]]?.points + 6);
+  } else if (rules[thisVal[1]]?.draw === thisVal[0]) {
+    score.push(rules[thisVal[1]]?.points + 3);
   } else {
-    score.push(rules[thisVal[1]].points);
+    score.push(rules[thisVal[1]]?.points ?? 0);
   }
 });
 
