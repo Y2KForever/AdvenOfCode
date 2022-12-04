@@ -1,5 +1,5 @@
 const { readInput } = require("../../utils");
-const split = readInput("2022\\04\\input.txt");
+const split = readInput("../input.txt");
 
 const pairs = [];
 
