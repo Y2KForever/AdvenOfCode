@@ -1,55 +1,31 @@
-const { readInput } = require("../../utils");
-const split = readInput("../input.txt");
-
 const rules = {
   X: {
-    rock: {
-      points: 3,
-    },
-    paper: {
-      points: 1,
-    },
-    scissors: {
-      points: 2,
-    },
+    points: 1,
+    win: "C",
+    draw: "A",
   },
   Y: {
-    rock: {
-      points: 4,
-    },
-    paper: {
-      points: 5,
-    },
-    scissors: {
-      points: 6,
-    },
+    points: 2,
+    win: "A",
+    draw: "B",
   },
   Z: {
-    rock: {
-      points: 8,
-    },
-    paper: {
-      points: 9,
-    },
-    scissors: {
-      points: 7,
-    },
+    points: 3,
+    win: "B",
+    draw: "C",
   },
-};
-
-const hands = {
-  A: "rock",
-  B: "paper",
-  C: "scissors",
 };
 
 const score = [];
 
 split.forEach((val) => {
   const thisVal = val.split(" ");
-  const hand = hands[thisVal[0]];
-  if (hand) {
-    score.push(rules[thisVal[1]][hand].points);
+  if (rules[thisVal[1]]?.win === thisVal[0]) {
+    score.push(rules[thisVal[1]]?.points + 6);
+  } else if (rules[thisVal[1]]?.draw === thisVal[0]) {
+    score.push(rules[thisVal[1]]?.points + 3);
+  } else {
+    score.push(rules[thisVal[1]]?.points ?? 0);
   }
 });
 
