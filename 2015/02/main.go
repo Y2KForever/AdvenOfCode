@@ -26,6 +26,6 @@ func main() {
 
 		ribbon += numbers[0] + numbers[0] + numbers[1] + numbers[1] + bow
 	}
-	fmt.Println("They need: ", wrappingPaper)
-	fmt.Println("They need: ", ribbon)
+	fmt.Println("Part 1: ", wrappingPaper)
+	fmt.Println("Part 2: ", ribbon)
 }
