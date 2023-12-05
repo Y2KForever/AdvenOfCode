@@ -15,7 +15,7 @@ func ReadInput(input string) ([]string, error) {
 	lineBreak := "\r\n"
 
 	if runtime.GOOS != "windows" {
-		lineBreak = "\n"
+		lineBreak = "\n\n"
 	}
 	lines := strings.Split(fileContent, lineBreak)
 	return lines, nil
