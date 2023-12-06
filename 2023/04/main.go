@@ -31,6 +31,6 @@ func main() {
 			part2 += copies[i]
 		}
 	}
-	fmt.Println(part1)
-	fmt.Println(part2)
+	fmt.Println("Sum of part 1:", part1)
+	fmt.Println("Sum of part 2:", part2)
 }

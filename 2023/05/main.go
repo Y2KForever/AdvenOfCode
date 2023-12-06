@@ -1,16 +1,17 @@
 package main
 
 import (
-	"aoc-2023/utils"
 	"encoding/json"
 	"fmt"
 	"math"
+	"os"
 	"slices"
 	"strings"
 )
 
 func main() {
-	input, _ := utils.ReadInput("input.txt")
+	file, _ := os.ReadFile("input.txt") // Special case
+	input := strings.Split(strings.TrimSpace(string(file)), "\n\n")
 
 	var seeds []int
 	json.Unmarshal([]byte("["+strings.Join(strings.Fields(strings.Split(input[0], ": ")[1]), ",")+"]"), &seeds)
