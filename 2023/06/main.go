@@ -22,8 +22,8 @@ func main() {
 		return r
 	}
 
-	fmt.Println(calc(strings.Fields(input[0])[1:], strings.Fields(input[1])[1:]))
-	fmt.Println(calc(
+	fmt.Println("Sum of part 1:", calc(strings.Fields(input[0])[1:], strings.Fields(input[1])[1:]))
+	fmt.Println("Sum of part 2:", calc(
 		[]string{strings.Join(strings.Fields(input[0])[1:], "")},
 		[]string{strings.Join(strings.Fields(input[1])[1:], "")},
 	))
