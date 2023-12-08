@@ -34,8 +34,8 @@ func main() {
 		return
 	}
 
-	fmt.Println("Sum of part1: ", winnings(false))
-	fmt.Println("Sum of part2: ", winnings(true))
+	fmt.Println("Sum part 1: ", winnings(false))
+	fmt.Println("Sum part 2:", winnings(true))
 }
 
 func rank(cards string, jokers bool) int {
